@@ -19,7 +19,7 @@ Este repositorio es una adaptación independiente que agrega enlaces directos al
 - Responsive layout for phones, tablets, and desktop screens.
 - Automatic language selection: English when the browser's primary language is English; Spanish otherwise.
 - Accessible labels and translated alternative text.
-- Direct links to the church website, YouTube, Facebook, and Instagram.
+- Direct links to the church website, Google Maps, YouTube, Facebook, and Instagram.
 
 ## Church links / Enlaces de la iglesia
 
@@ -27,6 +27,7 @@ Este repositorio es una adaptación independiente que agrega enlaces directos al
 - [YouTube](https://www.youtube.com/@IglesiaAdventista7Riverside)
 - [Facebook](https://www.facebook.com/IglesiaAdventista7Riverside/)
 - [Instagram](https://www.instagram.com/iglesiaadventista7riverside/)
+- [Google Maps / Cómo llegar](https://maps.app.goo.gl/utc3uumteRJTMJao9)
 
 ## Live site / Sitio publicado
 

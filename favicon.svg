@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title description">
+  <title id="title">WiFi Gratis</title>
+  <desc id="description">Señal WiFi dorada con una cruz</desc>
+  <defs>
+    <linearGradient id="sunset" x1="10" y1="5" x2="54" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD977"/>
+      <stop offset=".48" stop-color="#F3A43A"/>
+      <stop offset="1" stop-color="#C96518"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(31 27) rotate(90) scale(34)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFF7D2" stop-opacity=".5"/>
+      <stop offset="1" stop-color="#FFF7D2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="2" stdDeviation="2" flood-color="#6B3414" flood-opacity=".38"/>
+    </filter>
+  </defs>
+  <rect width="64" height="64" rx="16" fill="url(#sunset)"/>
+  <rect x="2" y="2" width="60" height="60" rx="14" fill="url(#glow)" stroke="#FFF3C4" stroke-opacity=".55" stroke-width="2"/>
+  <g fill="none" stroke="#FFFDF3" stroke-linecap="round" stroke-width="5" filter="url(#shadow)">
+    <path d="M13 27.5c10.5-9.2 27.5-9.2 38 0"/>
+    <path d="M20.5 36c6.4-5.7 16.6-5.7 23 0"/>
+  </g>
+  <circle cx="32" cy="46" r="4.5" fill="#FFFDF3" filter="url(#shadow)"/>
+  <g fill="#4A2810" stroke="#FFF3C4" stroke-width="1.5" stroke-linejoin="round" filter="url(#shadow)">
+    <path d="M29.5 10h5v6h5v5h-5v8h-5v-8h-5v-5h5z"/>
+  </g>
+</svg>
