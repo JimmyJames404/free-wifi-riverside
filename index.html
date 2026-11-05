@@ -23,20 +23,58 @@
   <main class="scene">
     <div class="glow" aria-hidden="true"></div>
     <div class="rays" aria-hidden="true"></div>
-    <div class="signal" aria-label="Señal ilimitada">📶 Señal ilimitada</div>
-    <h1 class="title" aria-label="La única conexión que necesitas es Jesús">
-      <span class="small">LA ÚNICA</span>
-      <span class="large">CONEXIÓN</span>
-      <span class="question">QUE NECESITAS ES</span>
-      <span class="large">JESÚS</span>
+    <div class="signal" data-i18n="signal" aria-label="Señal ilimitada">📶 Señal ilimitada</div>
+    <h1 class="title" data-i18n-aria="titleAria" aria-label="La única conexión que necesitas es Jesús">
+      <span class="small" data-i18n="titleOne">LA ÚNICA</span>
+      <span class="large" data-i18n="titleTwo">CONEXIÓN</span>
+      <span class="question" data-i18n="titleThree">QUE NECESITAS ES</span>
+      <span class="large" data-i18n="titleFour">JESÚS</span>
     </h1>
-    <img class="jesus" src="./jesus.webp" alt="Jesús sonriendo y señalando hacia arriba" width="1080" height="760">
-    <nav class="social-actions" aria-label="Enlaces de la Iglesia Adventista de Riverside">
-      <a class="social-link" href="https://groupohispanoenriversidemo.adventistchurch.org/" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">🌐</span><span>Ver sitio web</span></a>
-      <a class="social-link" href="https://www.youtube.com/@IglesiaAdventista7Riverside" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">▶️</span><span>Seguir en YouTube</span></a>
-      <a class="social-link" href="https://www.facebook.com/IglesiaAdventista7Riverside/" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">ⓕ</span><span>Seguir en Facebook</span></a>
-      <a class="social-link" href="https://www.instagram.com/iglesiaadventista7riverside/" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">◎</span><span>Seguir en Instagram</span></a>
+    <img class="jesus" src="./jesus.webp" data-i18n-alt="imageAlt" alt="Jesús sonriendo y señalando hacia arriba" width="1080" height="760">
+    <nav class="social-actions" data-i18n-aria="navAria" aria-label="Enlaces de la Iglesia Adventista de Riverside">
+      <a class="social-link" href="https://groupohispanoenriversidemo.adventistchurch.org/" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">🌐</span><span data-i18n="website">Ver sitio web</span></a>
+      <a class="social-link" href="https://www.youtube.com/@IglesiaAdventista7Riverside" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">▶️</span><span data-i18n="youtube">Seguir en YouTube</span></a>
+      <a class="social-link" href="https://www.facebook.com/IglesiaAdventista7Riverside/" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">ⓕ</span><span data-i18n="facebook">Seguir en Facebook</span></a>
+      <a class="social-link" href="https://www.instagram.com/iglesiaadventista7riverside/" target="_blank" rel="noopener noreferrer"><span class="icon" aria-hidden="true">◎</span><span data-i18n="instagram">Seguir en Instagram</span></a>
     </nav>
   </main>
+  <script>
+    (() => {
+      const translations = {
+        es: {
+          pageTitle: 'WiFi Gratis | Iglesia Adventista de Riverside',
+          description: 'La única conexión que necesitas es Jesús.',
+          socialDescription: 'Conéctate con la Iglesia Adventista del Séptimo Día de Riverside.',
+          signal: '📶 Señal ilimitada',
+          titleAria: 'La única conexión que necesitas es Jesús',
+          titleOne: 'LA ÚNICA', titleTwo: 'CONEXIÓN', titleThree: 'QUE NECESITAS ES', titleFour: 'JESÚS',
+          imageAlt: 'Jesús sonriendo y señalando hacia arriba',
+          navAria: 'Enlaces de la Iglesia Adventista de Riverside',
+          website: 'Ver sitio web', youtube: 'Seguir en YouTube', facebook: 'Seguir en Facebook', instagram: 'Seguir en Instagram'
+        },
+        en: {
+          pageTitle: 'Free WiFi | Riverside Adventist Church',
+          description: 'The only connection you need is Jesus.',
+          socialDescription: 'Connect with the Riverside Seventh-day Adventist Church.',
+          signal: '📶 Unlimited signal',
+          titleAria: 'The only connection you need is Jesus',
+          titleOne: 'THE ONLY', titleTwo: 'CONNECTION', titleThree: 'YOU NEED IS', titleFour: 'JESUS',
+          imageAlt: 'Jesus smiling and pointing upward',
+          navAria: 'Riverside Adventist Church links',
+          website: 'Visit our website', youtube: 'Follow on YouTube', facebook: 'Follow on Facebook', instagram: 'Follow on Instagram'
+        }
+      };
+      const primaryLanguage = (navigator.languages?.[0] || navigator.language || 'es').toLowerCase();
+      const language = primaryLanguage.startsWith('en') ? 'en' : 'es';
+      const copy = translations[language];
+      document.documentElement.lang = language;
+      document.title = copy.pageTitle;
+      document.querySelector('meta[name="description"]').content = copy.description;
+      document.querySelector('meta[property="og:description"]').content = copy.socialDescription;
+      document.querySelectorAll('[data-i18n]').forEach((element) => { element.textContent = copy[element.dataset.i18n]; });
+      document.querySelectorAll('[data-i18n-aria]').forEach((element) => { element.setAttribute('aria-label', copy[element.dataset.i18nAria]); });
+      document.querySelectorAll('[data-i18n-alt]').forEach((element) => { element.alt = copy[element.dataset.i18nAlt]; });
+    })();
+  </script>
 </body>
 </html>
