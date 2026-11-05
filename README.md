@@ -20,6 +20,10 @@ Este repositorio es una adaptación independiente que agrega enlaces directos al
 - Automatic language selection: English when the browser's primary language is English; Spanish otherwise.
 - Accessible labels and translated alternative text.
 - Direct links to the church website, Google Maps, YouTube, Facebook, and Instagram.
+- Animated WiFi connection sequence with localized status messages.
+- Confetti celebration on connection and when tapping the background.
+- Subtle floating motion for the Jesus illustration.
+- Collapsible link panel on smaller phones so the main artwork remains visible.
 
 ## Church links / Enlaces de la iglesia
 
